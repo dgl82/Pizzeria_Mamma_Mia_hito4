@@ -18,7 +18,7 @@ const Pizza = () => {
 
   return (
     <div className="carro">
-      <div className="contenedorPizza" style={{ maxWidth: "75%" }}>
+      <div className="contenedorPizza" style={{ maxWidth: "60%", gap: "2em" }}>
         <div>
           <img width={300} height={300} src={pizza.img} />
         </div>

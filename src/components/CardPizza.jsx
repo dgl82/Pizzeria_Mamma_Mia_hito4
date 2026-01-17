@@ -2,20 +2,20 @@ import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import Button from "react-bootstrap/Button";
 
-const CardPizza = ({ name, desc, price, ingredients, img }) => {
+const CardPizza = ({ detalles }) => {
   return (
     <Card className="pizzas" style={{ width: "23rem" }}>
-      <Card.Img variant="top" src={img} />
+      <Card.Img variant="top" src={detalles.img} />
       <Card.Body>
-        <Card.Title>Pizza {name}</Card.Title>
-        <Card.Text>{desc}</Card.Text>
+        <Card.Title>Pizza {detalles.name}</Card.Title>
+        <Card.Text>{detalles.desc}</Card.Text>
       </Card.Body>
       <ListGroup className="list-group-flush">
         <ListGroup.Item>
           <p className="centrado">🍕 Ingredientes:</p>
           <div className="listaIngredientes">
             <ul>
-              {ingredients.map((ingredient) => (
+              {detalles.ingredients.map((ingredient) => (
                 <li key={ingredient}>{ingredient}</li>
               ))}
             </ul>
@@ -24,7 +24,7 @@ const CardPizza = ({ name, desc, price, ingredients, img }) => {
       </ListGroup>
       <Card.Body>
         <p className="centrado precio">
-          Precio: ${price.toLocaleString("es-CL")}
+          Precio: ${detalles.price.toLocaleString("es-CL")}
         </p>
 
         <div className="botonesSeparados">

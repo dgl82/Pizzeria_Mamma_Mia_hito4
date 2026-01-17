@@ -138,3 +138,14 @@ body {
 p {
   margin: 1rem 0;
 }
+
+.contenedorPizza {
+  margin: 2em;
+  display: flex;
+  place-items: center;
+  text-align: center;
+}
+
+.ingredientes {
+  width: 10px;
+}
